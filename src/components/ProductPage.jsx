@@ -23,9 +23,10 @@ const ProductPage = () => {
     return product;
   };
 
-  useEffect(() => {
-    getProduct();
-  }, []);
+useEffect(() => {
+  getProduct();
+}, [getProduct]); // ✅ Add getProduct to the dependency array
+
 
   if (!product?.title) return <h1>Loading Product ...</h1>;
 
