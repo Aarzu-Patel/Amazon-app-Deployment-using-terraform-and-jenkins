@@ -23,11 +23,10 @@ const SearchResults = () => {
         setProducts(categoryResults);
       }
     });
-  };
-
+  
   useEffect(() => {
-    getSearchResults();
-  }, [searchParams]);
+  getSearchResults();
+}, [getSearchResults]); // Add `getSearchResults` as a dependency
 
   return (
     <div className="min-w-[1200px] max-w-[1300px] m-auto pt-4">
